@@ -9,7 +9,8 @@ var NavTree = function (selector, options) {
     groupCloseIconClass: (options.groupCloseIconClass && options.groupCloseIcon) ? options.groupCloseIconClass : "fas",
     groupCloseIcon: (options.groupCloseIconClass && options.groupCloseIcon) ? options.groupCloseIcon : "fa-chevron-right",
     linkIconClass: (options.linkIconClass && options.linkIcon) ? options.linkIconClass : "fas",
-    linkIcon: (options.linkIconClass && options.linkIcon) ? options.linkIcon : "fa-link",
+    //linkIcon: (options.linkIconClass && options.linkIcon) ? options.linkIcon : "fa-link",
+    linkIcon: (options.linkIconClass && options.linkIcon) ? options.linkIcon : "",
     searchPlaceholderText: options.searchPlaceholderText || "",
     iconWidth: options.iconWidth || ""
   }
@@ -18,6 +19,10 @@ var NavTree = function (selector, options) {
     var wrapper = document.createElement('span');
     wrapper.classList.add("d-inline-block", "text-center", "tree-icon");
     wrapper.style.width = props.iconWidth;
+    //add by akn 20230506
+    if(icon==""){
+      wrapper.style.width = 0;
+    }
     wrapper.innerHTML = `<i class="${iconClass} ${icon}"></i>`;
     return wrapper;
   }
