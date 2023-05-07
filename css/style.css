@@ -143,3 +143,11 @@ main {
   overflow-y: auto;
 }
 
+.link-body-emphasis{
+  color: rgba(var(--bs-emphasis-color-rgb), .70);
+}
+
+.chart{
+  color: rgba(var(--bs-emphasis-color-rgb), .70);
+}
+

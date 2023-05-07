@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" href="./css/tree.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
 </head>
 
 <body>
@@ -87,8 +88,8 @@
     <div class="container-fluid">
       <a class="navbar-brand" href="#">Navbar</a>
       <div class="dropdown mr-2">
-        <a href="#" class="d-flex align-items-center text-decoration-none dropdown-toggle link-body-emphasis" data-bs-toggle="dropdown"
-          aria-expanded="false">
+        <a href="#" class="d-flex align-items-center text-decoration-none dropdown-toggle link-body-emphasis"
+          data-bs-toggle="dropdown" aria-expanded="false">
           <img src="https://github.com/mdo.png" alt="" width="32" height="32" class="rounded-circle me-2">
           <strong>Pojok Code</strong>
         </a>
@@ -113,8 +114,9 @@
               Persiapan
             </a>
             <ul>
-              <li><a class="link-body-emphasis" href="#"><i class="fa-solid fa-file"></i> Kebutuhan Dasar</a></li>
-              <li><a class="link-body-emphasis" href="#"><i class="fa-solid fa-tablet-screen-button"></i> Instalasi</a></li>
+              <li><a class="link-body-emphasis" href="#"><i class="fa-solid fa-file"></i> Dashboard</a></li>
+              <li><a class="link-body-emphasis" href="#"><i class="fa-solid fa-tablet-screen-button"></i> Instalasi</a>
+              </li>
             </ul>
           </li>
           <li id="li2">
@@ -222,17 +224,12 @@
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="#" class="text-decoration-none link-body-emphasis">Home</a></li>
-            <li class="breadcrumb-item"><a href="#" class="text-decoration-none link-body-emphasis">Library</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Data</li>
+            <li class="breadcrumb-item"><a href="#" class="text-decoration-none link-body-emphasis">Dashboard</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Chart 1</li>
           </ol>
         </nav>
-        <div class="mb-3">
-          <label for="exampleFormControlInput1" class="form-label">Email address</label>
-          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-        </div>
-        <div class="mb-3">
-          <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
-          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        <div class="container">
+          <canvas id="barChart" style="width:100%;max-width:100%"></canvas>
         </div>
       </div>
     </div>
@@ -241,6 +238,103 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
     crossorigin="anonymous"></script>
+
+  <script>
+    const lightGridLineColor = 'black';
+    const darkGridLineColor = 'yellow'
+
+    // bar chart start
+    const chartData = {
+      labels: ['Ocak', 'Şubat', 'Mart', 'Nisan', 'Mayıs', 'Haziran', 'Temmuz', 'Ağustos', 'Eylül', 'Ekim', 'Kasım', 'Aralık'],
+      datasets: [{
+        label: "Yatırımlar",
+        backgroundColor: "#1355FF",
+        borderWidth: 0,
+        borderRadius: 5,
+        data: [20423, 40123, 60313, 80412, 40414, 1932, 40131, 10124, 30578, 50421, 60124, 14512]
+      }, {
+        label: "Çekimler",
+        backgroundColor: "#57D3DD",
+        borderRadius: 5,
+        borderWidth: 0,
+        data: [60732, 30125, 20712, 50252, 30689, 50234, 20464, 30123, 10245, 15123, 40126, 60126]
+      },
+
+      ]
+    };
+
+    let value = 80000;
+    const ctx = document.getElementById('barChart');
+    const myBarChart = new Chart(ctx, {
+
+      type: "bar",
+      data: chartData,
+      drawBorder: false,
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        scales: {
+          x: {
+            title: {
+              display: false
+            },
+            grid: {
+              display: false
+            },
+            ticks: {
+              color: "#718096"
+            }
+          },
+          y: {
+            title: {
+              display: false
+            },
+            min: 0,
+            max: 80000,
+            ticks: {
+              stepSize: 20000,
+              color: "#718096",
+              callback: function (value, index, values) {
+                return value * 0.001 + " K";
+              }
+            },
+            grid: {
+              color: '#EDF2F7'
+            }
+          }
+        },
+        plugins: {
+          legend: {
+            position: "top",
+            labels: {
+              font: {
+                size: 12,
+                weight: 500
+              },
+              color: "#2D3748",
+              boxWidth: 8,
+              boxHeight: 8,
+              usePointStyle: true,
+              pointStyle: "circle"
+            }
+          }
+        }
+      }
+    });
+
+    document.getElementById('chartChange').addEventListener('click', () => {
+      const toDarkMode = myBarChart.options.scales.x.grid.color === lightGridLineColor;
+      if (toDarkMode) {
+        myBarChart.options.scales.x.grid.color = darkGridLineColor;
+        myBarChart.options.scales.y.grid.color = darkGridLineColor;
+      } else {
+        myBarChart.options.scales.x.grid.color = lightGridLineColor;
+        myBarChart.options.scales.y.grid.color = lightGridLineColor;
+      }
+
+      myBarChart.update();
+    });
+  </script>
 
   <script src="./js/tree.js"></script>
   <script>
