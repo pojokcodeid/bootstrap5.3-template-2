@@ -11,6 +11,31 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" href="./css/tree.css">
+  <style>
+    #mySidebar {
+      width: 300px;
+      position: fixed;
+      left: 0;
+      height: 100vh;
+      z-index: 999;
+      transition: all 0.3s;
+      overflow-y: scroll;
+    }
+    #mySidebar.active2 {
+      margin-left: -300px;
+    }
+    #mySidebar.active {
+      left: 0;
+    }
+    #main{
+      margin-left: 300px;
+    }
+    #main.active2{
+      margin-left: 0;
+      left: 0;
+      transition: all 0.3s;
+    }
+  </style>
   <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap5.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
 </head>
@@ -85,7 +110,37 @@
     </ul>
   </div>
 
-  <nav class="navbar bg-body-tertiary mb-1 fixed-top">
+  <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+    <div class="container-fluid">
+      <div class="d-flex justify-content-between" style="width: 270px;">
+        <button onclick="closeNav()" type="button" id="sidebarCollapse" class="btn btn-default disable" inactive="">
+          <i class="fa-solid fa-xmark" id="btnClose"></i>
+        </button>
+        <a class="navbar-brand" href="./index.html">Pojok Code</a>
+        <span></span>
+      </div>
+      <div class="d-flex">
+        <div class="dropdown mr-2">
+          <a href="#" class="d-flex align-items-center text-decoration-none dropdown-toggle link-body-emphasis"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="./img/img_avatar1.png" alt="" width="32" height="32" class="rounded-circle me-2">
+            <strong>Asep Komarudin</strong>
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end text-small shadow ">
+            <li><a class="dropdown-item" href="#">New project...</a></li>
+            <li><a class="dropdown-item" href="#">Settings</a></li>
+            <li><a class="dropdown-item" href="#">Profile</a></li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li><a class="dropdown-item" href="#">Sign out</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- <nav class="navbar bg-body-tertiary mb-1 fixed-top">
     <div class="container-fluid">
       <a class="navbar-brand" href="./index.html">Navbar</a>
       <div class="dropdown mr-2">
@@ -105,10 +160,10 @@
         </ul>
       </div>
     </div>
-  </nav>
+  </nav> -->
   <div class="container-fluid" style="margin-top:70px">
     <div class="row justify-content-start">
-      <div class="col-2 justify-content-start border-end overflow-auto">
+      <div class="col-2 justify-content-start border-end overflow-auto" id="mySidebar">
         <ul id="nav-tree">
           <li id="li0" class="active">
             <a class="nav-link link-body-emphasis" href="">
@@ -221,7 +276,7 @@
           </li>
         </ul>
       </div>
-      <div class="col-10">
+      <div class="col-10" id="main">
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="#" class="text-decoration-none link-body-emphasis">Home</a></li>
@@ -845,18 +900,18 @@
       }
     });
 
-    document.getElementById('chartChange').addEventListener('click', () => {
-      const toDarkMode = myBarChart.options.scales.x.grid.color === lightGridLineColor;
-      if (toDarkMode) {
-        myBarChart.options.scales.x.grid.color = darkGridLineColor;
-        myBarChart.options.scales.y.grid.color = darkGridLineColor;
-      } else {
-        myBarChart.options.scales.x.grid.color = lightGridLineColor;
-        myBarChart.options.scales.y.grid.color = lightGridLineColor;
-      }
+    // document.getElementById('chartChange').addEventListener('click', () => {
+    //   const toDarkMode = myBarChart.options.scales.x.grid.color === lightGridLineColor;
+    //   if (toDarkMode) {
+    //     myBarChart.options.scales.x.grid.color = darkGridLineColor;
+    //     myBarChart.options.scales.y.grid.color = darkGridLineColor;
+    //   } else {
+    //     myBarChart.options.scales.x.grid.color = lightGridLineColor;
+    //     myBarChart.options.scales.y.grid.color = lightGridLineColor;
+    //   }
 
-      myBarChart.update();
-    });
+    //   myBarChart.update();
+    // });
   </script>
 
   <script src="./js/tree.js"></script>
@@ -883,6 +938,61 @@
       });
     });
   </script>
+  <script>
+    function openNav() {
+      let sidebar=document.getElementById("mySidebar");
+      let main=document.getElementById("main");
+      sidebar.style.width = "250px";
+      main.style.marginLeft = "250px";
+    }
+    
+    function closeNav() {
+      let sidebar=document.getElementById("mySidebar");
+      let main=document.getElementById("main");
+      let iconbar=document.getElementById("sidebarCollapse");
+      if(sidebar.hasAttribute('inactive')){
+        sidebar.style.width = "300px";
+        sidebar.classList.add("active");
+        sidebar.classList.add("col-2");
+        sidebar.classList.remove("active2");
+        sidebar.removeAttribute('inactive');
+        main.classList.add("col-10");
+        main.classList.remove("col-12");
+        main.style.marginLeft= "300px";
+        main.style.transition= "all 0.3s";
+      }else{
+        sidebar.style.width = "0";
+        sidebar.setAttribute('inactive', 'inactive');
+        sidebar.classList.add("active2");
+        sidebar.classList.remove("col-2");
+        main.classList.add("col-12");
+        main.classList.remove("col-10");
+        main.style.marginLeft= "0";
+        main.style.transition= "all 0.3s";
+      }
+      console.log(iconbar.hasAttribute('inactive'));
+      if(iconbar.hasAttribute('inactive')){   
+        let iconbar=document.getElementById("sidebarCollapse");
+        let btnClose=document.getElementById("btnClose");
+        let icon=document.createElement("i");
+        icon.classList.add("fas");
+        icon.classList.add("fa-bars");
+        icon.setAttribute("id","btnBar");
+        iconbar.appendChild(icon);
+        iconbar.removeChild(btnClose);
+        iconbar.removeAttribute('inactive');
+      }else{
+        iconbar.setAttribute('inactive', '');
+        let btnBar=document.getElementById("btnBar");
+        iconbar.removeChild(btnBar);
+        let icon=document.createElement("i");
+        icon.classList.add("fa-solid");
+        icon.classList.add("fa-xmark");
+        icon.setAttribute("id","btnClose");
+        iconbar.appendChild(icon);
+      }
+    }
+    </script>
 </body>
 
 </html>
