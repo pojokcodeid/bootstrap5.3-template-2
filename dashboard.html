@@ -5,37 +5,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Bootstrap demo</title>
-  <script src="./js/script.js"></script>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" href="./css/tree.css">
-  <style>
-    #mySidebar {
-      width: 300px;
-      position: fixed;
-      left: 0;
-      height: 100vh;
-      z-index: 999;
-      transition: all 0.3s;
-      overflow-y: scroll;
-    }
-    #mySidebar.active2 {
-      margin-left: -300px;
-    }
-    #mySidebar.active {
-      left: 0;
-    }
-    #main{
-      margin-left: 300px;
-    }
-    #main.active2{
-      margin-left: 0;
-      left: 0;
-      transition: all 0.3s;
-    }
-  </style>
   <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap5.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
 </head>
@@ -937,62 +911,8 @@
         searchPlaceholderText: "Search",
       });
     });
-  </script>
-  <script>
-    function openNav() {
-      let sidebar=document.getElementById("mySidebar");
-      let main=document.getElementById("main");
-      sidebar.style.width = "250px";
-      main.style.marginLeft = "250px";
-    }
-    
-    function closeNav() {
-      let sidebar=document.getElementById("mySidebar");
-      let main=document.getElementById("main");
-      let iconbar=document.getElementById("sidebarCollapse");
-      if(sidebar.hasAttribute('inactive')){
-        sidebar.style.width = "300px";
-        sidebar.classList.add("active");
-        sidebar.classList.add("col-2");
-        sidebar.classList.remove("active2");
-        sidebar.removeAttribute('inactive');
-        main.classList.add("col-10");
-        main.classList.remove("col-12");
-        main.style.marginLeft= "300px";
-        main.style.transition= "all 0.3s";
-      }else{
-        sidebar.style.width = "0";
-        sidebar.setAttribute('inactive', 'inactive');
-        sidebar.classList.add("active2");
-        sidebar.classList.remove("col-2");
-        main.classList.add("col-12");
-        main.classList.remove("col-10");
-        main.style.marginLeft= "0";
-        main.style.transition= "all 0.3s";
-      }
-      console.log(iconbar.hasAttribute('inactive'));
-      if(iconbar.hasAttribute('inactive')){   
-        let iconbar=document.getElementById("sidebarCollapse");
-        let btnClose=document.getElementById("btnClose");
-        let icon=document.createElement("i");
-        icon.classList.add("fas");
-        icon.classList.add("fa-bars");
-        icon.setAttribute("id","btnBar");
-        iconbar.appendChild(icon);
-        iconbar.removeChild(btnClose);
-        iconbar.removeAttribute('inactive');
-      }else{
-        iconbar.setAttribute('inactive', '');
-        let btnBar=document.getElementById("btnBar");
-        iconbar.removeChild(btnBar);
-        let icon=document.createElement("i");
-        icon.classList.add("fa-solid");
-        icon.classList.add("fa-xmark");
-        icon.setAttribute("id","btnClose");
-        iconbar.appendChild(icon);
-      }
-    }
-    </script>
+  </script>  
+  <script src="./js/script.js"></script>
 </body>
 
 </html>
