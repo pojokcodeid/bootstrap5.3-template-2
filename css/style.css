@@ -153,24 +153,6 @@ main {
 }
 
 /* custom sidebar */
-#mySidebar {
-  width: 300px;
-  position: fixed;
-  left: 0;
-  height: 100vh;
-  z-index: 999;
-  transition: all 0.3s;
-  overflow-y: scroll;
-}
-#mySidebar.active2 {
-  margin-left: -300px;
-}
-#mySidebar.active {
-  left: 0;
-}
-#main{
-  margin-left: 300px;
-}
 #main.active2{
   margin-left: 0;
   left: 0;
