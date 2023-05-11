@@ -176,6 +176,8 @@ function myFunction2(x) {
     sidebar.classList.remove("col-4");
     sidebar.style.display="";
     sidebar.style.marginLeft="0";
+    sidebar.classList.add("active");
+    sidebar.removeAttribute('inactive');
     //for main panel
     main.classList.add("col-10");
     main.classList.remove("col-12");
