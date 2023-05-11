@@ -178,6 +178,7 @@ main {
     transition: 0.5s;
     background-color: var(--bs-tertiary-bg);
     margin-top: 60px;
+    overflow-y: scroll;
   }
 }
 
