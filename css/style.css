@@ -181,3 +181,22 @@ main {
   }
 }
 
+.border-left-primary {
+  border-left: 3px solid #3B71CA;
+}
+.border-left-secondary {
+  border-left: 3px solid #9FA6B2;
+}
+.border-left-success {
+  border-left: 3px solid #14A44D;
+}
+.border-left-danger {
+  border-left: 3px solid #DC4C64;
+}
+.border-left-warning {
+  border-left: 3px solid #E4A11B;
+}
+.border-left-info {
+  border-left: 3px solid #54B4D3;
+}
+
