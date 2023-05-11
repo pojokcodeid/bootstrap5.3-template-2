@@ -159,3 +159,25 @@ main {
   transition: all 0.3s;
 }
 
+#mySidebar {
+  overflow-x: hidden;
+  transition: 0.5s;
+  background-color: var(--bs-tertiary-bg);
+  margin-left: 0;
+}
+
+/*fro tablet*/
+@media all and (max-width: 990px) {
+  #mySidebar {
+    margin-left: -33.34%;
+    position: fixed;
+    z-index: 1;
+    height: 100vh;
+    top: 0;
+    overflow-x: hidden;
+    transition: 0.5s;
+    background-color: var(--bs-tertiary-bg);
+    margin-top: 60px;
+  }
+}
+
