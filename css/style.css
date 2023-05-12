@@ -162,7 +162,7 @@ main {
 #mySidebar {
   overflow-x: hidden;
   transition: 0.5s;
-  background-color: var(--bs-tertiary-bg);
+  /* background-color: var(--bs-tertiary-bg); */
   margin-left: 0;
 }
 
