@@ -236,3 +236,7 @@ main {
   width: 100%;
 }
 
+.paginate_button{
+  z-index: 0 !important;
+}
+
