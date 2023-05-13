@@ -88,7 +88,7 @@ function closeNav() {
     main.classList.remove("col-12");
     if(x.matches){
       main.classList.add("col-12");
-      sidebar.classList.add("col-4");
+      sidebar.classList.add("col-6");
     }else{
       main.classList.add("col-10");
       sidebar.classList.add("col-2");
@@ -102,8 +102,8 @@ function closeNav() {
     sidebar.setAttribute('inactive', 'inactive');
     sidebar.style.transition= "all 0.3s";
     if(x.matches){
-      sidebar.style.marginLeft="-33.34%";
-      sidebar.classList.add("col-4");
+      sidebar.style.marginLeft="-50%";
+      sidebar.classList.add("col-6");
       main.classList.remove("col-8");
     }else{
       sidebar.style.marginLeft="-16.67%";
@@ -142,7 +142,7 @@ function myFunction2(x) {
     let sidebar=document.getElementById("mySidebar");
     let iconbar=document.getElementById("sidebarCollapse");
     let main=document.getElementById("main");
-    sidebar.classList.add("col-4");
+    sidebar.classList.add("col-6");
     sidebar.classList.remove("col-2");
     sidebar.setAttribute('inactive', 'inactive');
     sidebar.classList.add("sidepanel");
@@ -173,7 +173,7 @@ function myFunction2(x) {
     let main=document.getElementById("main");
     let iconbar=document.getElementById("sidebarCollapse");
     sidebar.classList.add("col-2");
-    sidebar.classList.remove("col-4");
+    sidebar.classList.remove("col-6");
     sidebar.style.display="";
     sidebar.style.marginLeft="0";
     sidebar.classList.add("active");
