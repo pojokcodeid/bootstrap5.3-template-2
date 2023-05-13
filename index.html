@@ -36,7 +36,7 @@
     </symbol>
   </svg>
 
-  <div class="dropdown position-fixed bottom-0 end-0 mb-5 me-3 bd-mode-toggle">
+  <!-- <div class="dropdown position-fixed bottom-0 end-0 mb-5 me-3 bd-mode-toggle">
     <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center" id="bd-theme" type="button"
       aria-expanded="false" data-bs-toggle="dropdown" aria-label="Toggle theme (auto)">
       <svg class="bi my-1 theme-icon-active" width="1em" height="1em">
@@ -82,11 +82,11 @@
         </button>
       </li>
     </ul>
-  </div>
+  </div> -->
 
   <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
     <div class="container-fluid">
-      <div class="d-flex justify-content-between" style="width: 270px;">
+      <div class="d-flex justify-content-between title-content">
         <button onclick="closeNav()" type="button" id="sidebarCollapse" class="btn btn-default disable" inactive="">
           <i class="fa-solid fa-xmark" id="btnClose"></i>
         </button>
@@ -94,18 +94,67 @@
         <span></span>
       </div>
       <div class="d-flex">
-        <button type="button" class="btn btn-link position-relative text-decoration-none">
+        <button type="button" class="btn btn-link position-relative text-decoration-none me-2 p-2">
           <i class="fa-solid fa-bell"></i>
-          <span class="position-absolute mt-2 top-0 start-100 translate-middle badge rounded-pill bg-danger">
+          <span class="position-absolute mt-2 top-0 p-1 start-100 translate-middle badge rounded-pill bg-danger">
             9+
             <span class="visually-hidden">unread messages</span>
           </span>
         </button>
-        <div class="dropdown ms-4">
+
+        <div class="dropdown bd-mode-toggle">
+          <button class="btn btn-link py-1 dropdown-toggle d-flex align-items-center" id="bd-theme" type="button"
+            aria-expanded="false" data-bs-toggle="dropdown" aria-label="Toggle theme (auto)">
+            <svg class="bi my-1 theme-icon-active" width="1em" height="1em">
+              <use href="#circle-half"></use>
+            </svg>
+            <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
+            <li>
+              <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light"
+                aria-pressed="false">
+                <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em">
+                  <use href="#sun-fill"></use>
+                </svg>
+                Light
+                <svg class="bi ms-auto d-none" width="1em" height="1em">
+                  <use href="#check2"></use>
+                </svg>
+              </button>
+            </li>
+            <li>
+              <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark"
+                aria-pressed="false">
+                <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em">
+                  <use href="#moon-stars-fill"></use>
+                </svg>
+                Dark
+                <svg class="bi ms-auto d-none" width="1em" height="1em">
+                  <use href="#check2"></use>
+                </svg>
+              </button>
+            </li>
+            <li>
+              <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto"
+                aria-pressed="true">
+                <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em">
+                  <use href="#circle-half"></use>
+                </svg>
+                Auto
+                <svg class="bi ms-auto d-none" width="1em" height="1em">
+                  <use href="#check2"></use>
+                </svg>
+              </button>
+            </li>
+          </ul>
+        </div>
+        
+        <div class="dropdown ms-1">
           <a href="#" class="d-flex align-items-center text-decoration-none dropdown-toggle link-body-emphasis"
             data-bs-toggle="dropdown" aria-expanded="false">
             <img src="./img/img_avatar1.png" alt="" width="32" height="32" class="rounded-circle me-2">
-            <strong>Asep Komarudin</strong>
+            <strong>Abu Fatimah</strong>
           </a>
           <ul class="dropdown-menu dropdown-menu-end text-small shadow ">
             <li><a class="dropdown-item" href="#">New project...</a></li>
@@ -294,13 +343,13 @@
         </div>
 
         <ul class="nav col-md-4 justify-content-end list-unstyled d-flex align-middle">
-          <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="23" height="23">
+          <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="20" height="20">
                 <use xlink:href="#twitter" />
               </svg></a></li>
-          <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="23" height="23">
+          <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="20" height="20">
                 <use xlink:href="#instagram" />
               </svg></a></li>
-          <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="23" height="23">
+          <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="20" height="20">
                 <use xlink:href="#facebook" />
               </svg></a></li>
         </ul>

@@ -155,7 +155,7 @@ main {
 /* custom sidebar */
 .main-content {
   margin-top:60px;
-  margin-bottom: 40px;
+  margin-bottom: 36px;
 }
 #main.active2{
   margin-left: 0;
@@ -178,6 +178,14 @@ main {
   background-color: var(--bs-tertiary-bg);
 }
 
+.navbar-brand{
+  display: inline;
+}
+
+.title-content{
+  width: 270px;
+}
+
 /*fro tablet*/
 @media all and (max-width: 990px) {
   #mySidebar {
@@ -191,6 +199,15 @@ main {
     background-color: var(--bs-tertiary-bg);
     margin-top: 60px;
     overflow-y: scroll;
+  }
+}
+
+@media all and (max-width: 640px) {
+  .navbar-brand{
+    display: none;
+  }
+  .title-content{
+    width: 50px;
   }
 }
 
