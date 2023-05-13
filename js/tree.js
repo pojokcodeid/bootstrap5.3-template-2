@@ -69,14 +69,24 @@ var NavTree = function (selector, options) {
         a.setAttribute("aria-controls", "nav-tree-list-wrapper-" + li_id);
         //edit by akn normaly open
         // a.prepend(getIconWithWrapper(props.groupCloseIconClass, props.groupCloseIcon));
-        a.prepend(getIconWithWrapper(props.groupOpenIconClass, props.groupOpenIcon));
+        if(li_id=="li0"){
+          a.prepend(getIconWithWrapper(props.groupOpenIconClass, props.groupOpenIcon));
+        }else{
+          a.prepend(getIconWithWrapper(props.groupCloseIconClass, props.groupCloseIcon));
+        }
 
 
         const ul = li.querySelector("ul:not(.extra)");
 
         var collapsable = document.createElement('div');
         //add show by akn supaya normal open
-        collapsable.classList.add("collapse", "ms-4", "show");
+        //collapsable.classList.add("collapse", "ms-4", "show");
+        if(li_id=="li0"){
+          collapsable.classList.add("collapse", "ms-4", "show");
+        }else{
+          collapsable.classList.add("collapse", "ms-4");
+        }
+
         collapsable.setAttribute("id", "nav-tree-list-wrapper-" + li_id);
         li.replaceChild(collapsable, ul);
         collapsable.appendChild(ul);
