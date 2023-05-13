@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
   <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
   <link rel="stylesheet" href="./css/datepicker.css">
+  <link rel="stylesheet" href="./asset/timepicker/css/timepicker.min.css"> 
 </head>
 
 <body>
@@ -261,6 +262,12 @@
                 <input type="text" class="form-control date2" id="inputPassword">
               </div>
             </div>
+            <div class="mb-3 row">
+              <label for="time" class="col-sm-2 col-form-label">Jam Datang</label>
+              <div class="col-sm-4">
+                <input type="text" class="form-control bs-timepicker" id="time">
+              </div>
+            </div>
         </div>
       </div>
     </div>
@@ -359,6 +366,12 @@
       });
 
       calendar.render();
+    });
+  </script>
+  <script src="./asset/timepicker/js/timepicker.min.js"></script>
+  <script>
+    $(function () {
+      $('.bs-timepicker').timepicker();
     });
   </script>
 </body>

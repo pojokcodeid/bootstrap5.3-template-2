@@ -208,7 +208,7 @@ x.addListener(myFunction2) // Attach listener function on state changes
 
 
 //custom date select
-$(".date").datepicker({
+$(".date-modal").datepicker({
   changeMonth: true,
   changeYear: true,
   beforeShow: function (el, dp) {
