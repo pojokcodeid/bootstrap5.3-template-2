@@ -231,12 +231,18 @@ main {
 }
 
 .selected{
-  /* border-right: 2px solid #3B71CA; */
+  border-right: 2px solid #3B71CA;
   background-color: rgba(var(--bs-emphasis-color-rgb), .04);
   width: 100%;
 }
 
 .paginate_button{
   z-index: 0 !important;
+}
+
+.nav-item a:hover{
+  background-color: rgba(var(--bs-emphasis-color-rgb), .04);
+  width: 100%;
+  margin: 0;
 }
 
