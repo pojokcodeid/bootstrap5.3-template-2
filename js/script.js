@@ -205,3 +205,23 @@ function myFunction2(x) {
 var x = window.matchMedia("(max-width: 990px)")
 myFunction2(x) // Call listener function at run time
 x.addListener(myFunction2) // Attach listener function on state changes
+
+
+//custom date select
+$(".date").datepicker({
+  changeMonth: true,
+  changeYear: true,
+  beforeShow: function (el, dp) {
+      $(el).parent().append($('#ui-datepicker-div'));
+      $('#ui-datepicker-div').hide();
+  },
+  onSelect: function () {
+      $(this).change();
+  }
+});
+
+//date 2 type non modal
+$(".date2").datepicker({
+  changeMonth: true,
+  changeYear: true
+});
