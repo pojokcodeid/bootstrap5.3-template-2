@@ -69,3 +69,33 @@
       })
   })
 })()
+
+function myFunction2(x) {
+  if (x.matches) { //
+    //clone child
+    let menu = document.querySelector('#user1');
+    let menu2 = document.querySelector('#user2');
+    let clonedMenu = menu.cloneNode(true);
+    clonedMenu.id = 'x2';
+    menu2.appendChild(clonedMenu);
+    menu2.style.display="";
+    //remove child
+    menu.innerHTML="";
+    menu.style.display="none";
+  }else{
+    //clone child
+    let menu = document.querySelector('#user1');
+    let menu2 = document.querySelector('#user2');
+    let clonedMenu = menu2.cloneNode(true);
+    clonedMenu.id = 'x1';
+    menu.appendChild(clonedMenu);
+    //remove child
+    menu2.innerHTML="";
+    menu2.style.display="none";
+    menu.style.display="";
+  }
+}
+
+var x = window.matchMedia("(max-width: 990px)")
+myFunction2(x) // Call listener function at run time
+x.addListener(myFunction2) // Attach listener function on state changes
