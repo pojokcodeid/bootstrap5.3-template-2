@@ -28,6 +28,16 @@
       return
     }
 
+    let ldark=document.getElementById("logodark");
+    let llight=document.getElementById("logolight");
+    if(theme==="dark"){
+      llight.style.display="none";
+      ldark.style.display="";
+    }else{
+      llight.style.display="";
+      ldark.style.display="none";
+    }
+
     const themeSwitcherText = document.querySelector('#bd-theme-text')
     const activeThemeIcon = document.querySelector('.theme-icon-active use')
     const btnToActive = document.querySelector(`[data-bs-theme-value="${theme}"]`)
@@ -57,7 +67,6 @@
 
   window.addEventListener('DOMContentLoaded', () => {
     showActiveTheme(getPreferredTheme())
-
     document.querySelectorAll('[data-bs-theme-value]')
       .forEach(toggle => {
         toggle.addEventListener('click', () => {
