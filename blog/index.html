@@ -81,6 +81,13 @@
     </ul>
   </div>
 
+  <!-- for show hide sidebar -->
+  <div class="dropdown position-fixed bottom-0 start-0 mb-3 ms-3 bd-mode-toggle">
+    <button id="btsColapse" onclick="closeNav()" type="button" class="btn btn-outline-primary btn-floating">
+      <i id="btnLeft" class="fa-solid fa-arrow-left"></i>
+    </button>
+  </div>
+
   <nav class="navbar navbar-expand-lg bg-body-tertiary mb-3">
     <div class="container-fluid d-flex align-items-center justify-content-between">
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -166,7 +173,7 @@
 
   <div class="container-fluid">
     <div class="row justify-content-start">
-      <div class="col-lg-2 col-md-4 col-sm-12 justify-content-start">
+      <div class="col-2 justify-content-start" id="mySidebar">
         <div class="flex-shrink-0 ps-1">
           <a href="/" class="d-flex align-items-center pb-3 mb-3 link-body-emphasis text-decoration-none border-bottom">
             <svg class="bi pe-none me-2" width="30" height="24">
@@ -242,7 +249,7 @@
           </ul>
         </div>
       </div>
-      <div class="col-lg-10 col-md-8 col-sm-12 col-xs-12">
+      <div class="col-10" id="main">
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="#">Home</a></li>
