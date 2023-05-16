@@ -152,6 +152,10 @@ main {
   margin-right: 30px;
 }
 
+.container-content{
+  margin-top: 90px;
+}
+
 /*fro tablet*/
 @media all and (max-width: 990px) {
   #mySidebar {
@@ -179,6 +183,8 @@ main {
   max-height: 100vh;
   padding-bottom: 130px;
 }
+
+
 
 
 
