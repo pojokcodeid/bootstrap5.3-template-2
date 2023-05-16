@@ -153,7 +153,7 @@ main {
 }
 
 .container-content{
-  margin-top: 80px;
+  margin-top: 85px;
   top: 0;
   bottom: 0;
   left: 0;
@@ -167,7 +167,7 @@ main {
   left: 0;
   bottom: 0;
   top: 0;
-  margin-top: 80px;
+  margin-top: 85px;
   position: fixed;
   width: 300px;
   overflow-x: hidden;
@@ -178,7 +178,7 @@ main {
 
 #main{
   margin-left: 305px;
-  margin-top: 80px;
+  margin-top: 85px;
   position: fixed;
   top: 0;
   left: 0;
@@ -199,7 +199,7 @@ main {
     bottom: 0;
     top: 0;
     height: auto;
-    margin-top: 80px;
+    margin-top: 85px;
     position: fixed;
     width: 300px;
     overflow-x: hidden;
@@ -210,6 +210,10 @@ main {
   .menubar{
     margin-left: 0;
     margin-right: 0;
+  }
+
+  .position-sticky{
+    padding-right: 20px;
   }
 }
 
