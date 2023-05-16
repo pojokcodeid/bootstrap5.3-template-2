@@ -84,7 +84,7 @@
 
   <!-- for show hide sidebar -->
   <div class="dropdown position-fixed bottom-0 start-0 mb-3 ms-3 bd-mode-toggle">
-    <button id="btsColapse" onclick="closeNav()" type="button" class="btn btn-outline-primary btn-floating">
+    <button id="btsColapse" onclick="closeNav()" type="button" class="btn btn-primary btn-floating">
       <i id="btnLeft" class="fa-solid fa-arrow-left"></i>
     </button>
   </div>
@@ -182,8 +182,8 @@
 
   <div class="container-fluid">
     <div class="row justify-content-start container-content">
-      <div class="col-2 justify-content-start" id="mySidebar">
-        <div class="flex-shrink-0 ps-1">
+      <div class="justify-content-start bg-body-tertiary p-2 rounded" id="mySidebar">
+        <div class="flex-shrink-0 ps-1 mb-5">
           <a href="/" class="d-flex align-items-center pb-3 mb-3 link-body-emphasis text-decoration-none border-bottom">
             <svg class="bi pe-none me-1" width="28" height="24">
               <use xlink:href="#bootstrap" />
@@ -280,18 +280,18 @@
               </button>
               <div class="collapse" id="account-collapse">
                 <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                  <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">New...</a></li>
-                  <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Profile</a></li>
-                  <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Settings</a></li>
-                  <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Sign out</a></li>
+                  <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">New...</a></li>
+                  <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Profile</a></li>
+                  <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Settings</a></li>
+                  <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Sign out</a></li>
                 </ul>
               </div>
             </li>
           </ul>
         </div>
       </div>
-      <div class="col-10" id="main">
-        <nav aria-label="breadcrumb">
+      <div id="main" class=" rounded p-3">
+        <nav aria-label="breadcrumb" class="bg-body-tertiary rounded ps-1">
           <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="#">Home</a></li>
             <li class="breadcrumb-item"><a href="#">Library</a></li>

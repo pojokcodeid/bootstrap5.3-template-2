@@ -97,12 +97,14 @@ function myFunction2(x) {
     let main=document.getElementById("main");
     sidebar.style.transition= "all 0.3s";
     sidebar.removeAttribute('inactive');
-    sidebar.style.display="none";
-    sidebar.style.marginLeft="-50%";
-    sidebar.classList.add("col-6");
+    sidebar.style.marginLeft="-300px";
+    sidebar.style.top="0";
+    sidebar.style.left="0";
+    sidebar.style.bottom="0";
+    sidebar.style.height="auto";
+    sidebar.style.paddingBottom="65px";
     sidebar.setAttribute('inactive', 'inactive');
-    main.classList.remove("col-8");
-    main.classList.add("col-12");
+    main.style.marginLeft="0";
     //iconbar
     let iconbar2=document.getElementById("btsColapse");
     iconbar2.setAttribute('inactive', '');
@@ -129,11 +131,10 @@ function myFunction2(x) {
     let sidebar=document.getElementById("mySidebar");
     let main=document.getElementById("main");
     main.style.transition= "all 0.3s";
-    main.classList.remove("col-12");
-    main.classList.add("col-10");
-    sidebar.classList.remove("col-6");
-    sidebar.classList.add("col-2");
-    sidebar.style.display='';
+    main.style.marginLeft="305px";
+    sidebar.style.left="0";
+    sidebar.style.marginLeft="0";
+    sidebar.style.width="300px";
     sidebar.classList.add("active");
     sidebar.style.marginLeft="0";
     sidebar.removeAttribute('inactive');
@@ -169,32 +170,26 @@ function closeNav() {
   var x = window.matchMedia("(max-width: 990px)")
   if(sidebar.hasAttribute('inactive')){
     main.style.transition= "all 0.3s";
-    main.classList.remove("col-12");
     if(x.matches){
-      main.classList.add("col-12");
-      sidebar.classList.add("col-6");
+      main.style.marginLeft="0";
     }else{
-      main.classList.add("col-10");
-      sidebar.classList.add("col-2");
+      main.style.marginLeft="305px";
     }
-    sidebar.style.display='';
     sidebar.classList.add("active");
     sidebar.style.marginLeft="0";
+    sidebar.style.top="0";
+    sidebar.style.bottom="0";
+    sidebar.style.left="0";
     sidebar.removeAttribute('inactive');
     sidebar.style.transition= "all 0.3s";
   }else{
     sidebar.setAttribute('inactive', 'inactive');
     sidebar.style.transition= "all 0.3s";
+    sidebar.style.marginLeft="-300px";
     if(x.matches){
-      sidebar.style.marginLeft="-50%";
-      sidebar.classList.add("col-6");
-      main.classList.remove("col-8");
-    }else{
-      sidebar.style.marginLeft="-16.67%";
-      sidebar.classList.add("col-2");
-      main.classList.remove("col-10");
+      sidebar.style.marginLeft="-300px";
     }
-    main.classList.add("col-12");
+    main.style.marginLeft="0";
     main.style.transition= "all 0.3s";
   }
 
