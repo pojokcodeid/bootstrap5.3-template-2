@@ -5,10 +5,15 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>My Blog</title>
-  <link rel="stylesheet" href="https://fonts.google.com/share?selection.family=Roboto%7CRubik%7CSpace%20Mono">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Space+Mono&display=swap" rel="stylesheet">
+
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.8.0/styles/atom-one-dark.css"> -->
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.8.0/styles/night-owl.css"> -->
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.8.0/styles/base16/onedark.css"> -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.8.0/styles/base16/gruvbox-dark-medium.css">
   <link rel="stylesheet" href="./css/style.css">
 </head>
 
@@ -84,7 +89,7 @@
 
   <!-- for show hide sidebar -->
   <div class="dropdown position-fixed bottom-0 start-0 mb-3 ms-3 bd-mode-toggle">
-    <button id="btsColapse" onclick="closeNav()" type="button" class="btn btn-primary btn-floating">
+    <button id="btsColapse" onclick="closeNav()" type="button" class="btn btn-bd-primary btn-lg btn-circle">
       <i id="btnLeft" class="fa-solid fa-arrow-left"></i>
     </button>
   </div>
@@ -378,6 +383,45 @@
                       <p>Spaceflights cannot be stopped. This is not the work of any one man or even a group of men. It
                         is a historical process which mankind is carrying out in accordance with the natural laws of
                         human development.</p>
+                      <p>Copy Code Dibawah :</p>
+<pre><code>.btn-circle {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  padding: 6px 0;
+  font-size: 12px;
+  line-height: 1.428571429;
+  border-radius: 15px;
+}</code></pre>
+
+<p>Dengan Script berikut:</p>
+<pre><code>window.addEventListener('DOMContentLoaded', () => {
+  showActiveTheme(getPreferredTheme())
+  document.querySelectorAll('[data-bs-theme-value]')
+    .forEach(toggle => {
+      toggle.addEventListener('click', () => {
+        const theme = toggle.getAttribute('data-bs-theme-value')
+        localStorage.setItem('theme', theme)
+        setTheme(theme)
+        showActiveTheme(theme, true)
+      })
+    })
+})</code></pre>
+<!-- gunakan link ini untuk encode -->
+<!-- https://mothereff.in/html-entities -->
+<p>INi Code HTMLnya :</p>
+<pre><code>&#x3C;!DOCTYPE html&#x3E;
+&#x3C;html lang=&#x22;en&#x22;&#x3E;
+&#x3C;head&#x3E;
+  &#x3C;meta charset=&#x22;UTF-8&#x22;&#x3E;
+  &#x3C;meta http-equiv=&#x22;X-UA-Compatible&#x22; content=&#x22;IE=edge&#x22;&#x3E;
+  &#x3C;meta name=&#x22;viewport&#x22; content=&#x22;width=device-width, initial-scale=1.0&#x22;&#x3E;
+  &#x3C;title&#x3E;Document&#x3C;/title&#x3E;
+&#x3C;/head&#x3E;
+&#x3C;body&#x3E;
+  &#x3C;h1&#x3E;Hello World&#x3C;/h1&#x3E;
+&#x3C;/body&#x3E;
+&#x3C;/html&#x3E;</code></pre>
                       <h2 class="section-heading">Reaching for the Stars</h2>
                       <p>As we got further and further away, it [the Earth] diminished in size. Finally it shrank to the
                         size of a marble, the most beautiful you can imagine. That beautiful, warm, living object looked
@@ -463,6 +507,12 @@
     integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
     crossorigin="anonymous"></script>
   <script src="js/script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/highlightjs-line-numbers.js@2.8.0/dist/highlightjs-line-numbers.min.js"></script> -->
+  <script>
+    hljs.initHighlightingOnLoad();
+    // hljs.initLineNumbersOnLoad();
+  </script>
 </body>
 
 </html>
