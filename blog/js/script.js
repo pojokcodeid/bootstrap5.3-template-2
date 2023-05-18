@@ -30,12 +30,15 @@
 
     let ldark=document.getElementById("logodark");
     let llight=document.getElementById("logolight");
+    let codestyle=document.getElementById("codeStyle");
     if(theme==="dark"){
       llight.style.display="none";
       ldark.style.display="";
+      codestyle.href="https://cdn.jsdelivr.net/npm/highlight.js@11.8.0/styles/base16/onedark.css";
     }else{
       llight.style.display="";
       ldark.style.display="none";
+      codestyle.href="https://cdn.jsdelivr.net/npm/highlight.js@11.8.0/styles/base16/one-light.css";
     }
 
     const themeSwitcherText = document.querySelector('#bd-theme-text')
