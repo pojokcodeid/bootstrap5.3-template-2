@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>My Blog</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Space+Mono&display=swap" rel="stylesheet">
-
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -15,7 +14,8 @@
   <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.8.0/styles/base16/onedark.css"> -->
   <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.8.0/styles/base16/gruvbox-dark-medium.css"> -->
   <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.8.0/styles/base16/one-light.css"> -->
-  <link id="codeStyle" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.8.0/styles/base16/onedark.css">
+  <link id="codeStyle" rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/highlight.js@11.8.0/styles/base16/onedark.css">
   <link rel="stylesheet" href="./css/style.css">
 </head>
 
@@ -104,8 +104,7 @@
       </button>
       <div>
         <a class="navbar-brand" href="#">
-          <img id="logolight" src="./img/pojokcode.png" alt="Bootstrap" width="150">
-          <img id="logodark" src="./img/pojokocde-w.png" alt="Bootstrap" width="150">
+          <img id="logo" src="./img/pojokocde-w.png" alt="Pojok Code" width="200">
         </a>
       </div>
       <div id="user2">
@@ -113,6 +112,10 @@
       </div>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
+          <li class="nav-item py-2 py-lg-1 col-12 col-lg-auto">
+            <div class="vr d-none d-lg-flex h-100 mx-lg-2"></div>
+            <hr class="d-lg-none my-2 text-white-50">
+          </li>
           <li class="nav-item dropdown dropdown-mega position-static">
             <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
               data-bs-auto-close="outside">Tutorials</a>
@@ -386,7 +389,7 @@
                         is a historical process which mankind is carrying out in accordance with the natural laws of
                         human development.</p>
                       <p>Copy Code Dibawah :</p>
-<pre><code>.btn-circle {
+                      <pre><code>.btn-circle {
   width: 30px;
   height: 30px;
   text-align: center;
@@ -396,8 +399,8 @@
   border-radius: 15px;
 }</code></pre>
 
-<p>Dengan Script berikut:</p>
-<pre><code>window.addEventListener('DOMContentLoaded', () => {
+                      <p>Dengan Script berikut:</p>
+                      <pre><code>window.addEventListener('DOMContentLoaded', () => {
   showActiveTheme(getPreferredTheme())
   document.querySelectorAll('[data-bs-theme-value]')
     .forEach(toggle => {
@@ -409,10 +412,10 @@
       })
     })
 })</code></pre>
-<!-- gunakan link ini untuk encode -->
-<!-- https://mothereff.in/html-entities -->
-<p>INi Code HTMLnya :</p>
-<pre><code>&#x3C;!DOCTYPE html&#x3E;
+                      <!-- gunakan link ini untuk encode -->
+                      <!-- https://mothereff.in/html-entities -->
+                      <p>INi Code HTMLnya :</p>
+                      <pre><code>&#x3C;!DOCTYPE html&#x3E;
 &#x3C;html lang=&#x22;en&#x22;&#x3E;
 &#x3C;head&#x3E;
   &#x3C;meta charset=&#x22;UTF-8&#x22;&#x3E;
@@ -473,15 +476,58 @@
             </div>
           </div>
           <div class="col-lg-4">
-            <div class="row position-sticky" style="top: 5px;">
+            <div class="row position-sticky z-3" style="top: 5px;">
               <div class="container-fluid">
                 <div class="col-lg-12">
                   <div class="h-100 p-5 bg-body rounded-3 shadow-sm">
-                    <h2>Add borders</h2>
-                    <p>Or, keep it light and add a border for some added definition to the boundaries of your content.
-                      Be sure to look under the hood at the source HTML here as we've adjusted the alignment and sizing
-                      of both column's content for equal-height.</p>
-                    <button class="btn btn-outline-secondary" type="button">Example button</button>
+                    <h5>Paling Populer</h5>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item">An item</li>
+                      <li class="list-group-item">A second item</li>
+                      <li class="list-group-item">A third item</li>
+                      <li class="list-group-item">A fourth item</li>
+                      <li class="list-group-item">And a fifth one</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-lg-12">
+                  <div class="card border-0 rounded mt-3">
+                    <div class="card-body">
+                      <h4 class="font-weight-bold">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-tags" width="35"
+                          height="35" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                          stroke-linecap="round" stroke-linejoin="round">
+                          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                          <path
+                            d="M7.859 6h-2.834a2.025 2.025 0 0 0 -2.025 2.025v2.834c0 .537 .213 1.052 .593 1.432l6.116 6.116a2.025 2.025 0 0 0 2.864 0l2.834 -2.834a2.025 2.025 0 0 0 0 -2.864l-6.117 -6.116a2.025 2.025 0 0 0 -1.431 -.593z">
+                          </path>
+                          <path d="M17.573 18.407l2.834 -2.834a2.025 2.025 0 0 0 0 -2.864l-7.117 -7.116"></path>
+                          <path d="M6 9h-.01"></path>
+                        </svg>
+                        TAGS
+                      </h4>
+                      <hr>
+                      <span class="badge bg-primary">Primary</span>
+                      <span class="badge bg-secondary">Secondary</span>
+                      <span class="badge bg-success">Success</span>
+                      <span class="badge bg-danger">Danger</span>
+                      <span class="badge bg-warning text-dark">Warning</span>
+                      <span class="badge bg-info text-dark">Info</span>
+                      <span class="badge bg-light text-dark">Light</span>
+                      <span class="badge bg-dark">Dark</span>                     
+                      <hr>
+                      <a href="#"
+                        class="btn btn-danger btn-sm btn-block border-0 shadow-1">Lihat Semua Tags
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-narrow-right"
+                          width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                          stroke-linecap="round" stroke-linejoin="round">
+                          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                          <path d="M5 12l14 0"></path>
+                          <path d="M15 16l4 -4"></path>
+                          <path d="M15 8l4 4"></path>
+                        </svg>
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>

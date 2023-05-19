@@ -28,16 +28,14 @@
       return
     }
 
-    let ldark=document.getElementById("logodark");
+    let logo=document.getElementById("logo");
     let llight=document.getElementById("logolight");
     let codestyle=document.getElementById("codeStyle");
     if(theme==="dark"){
-      llight.style.display="none";
-      ldark.style.display="";
+      logo.src="./img/pojokocde-w.png";
       codestyle.href="https://cdn.jsdelivr.net/npm/highlight.js@11.8.0/styles/base16/onedark.css";
     }else{
-      llight.style.display="";
-      ldark.style.display="none";
+      logo.src="./img/pojokcode.png";
       codestyle.href="https://cdn.jsdelivr.net/npm/highlight.js@11.8.0/styles/base16/one-light.css";
     }
 
