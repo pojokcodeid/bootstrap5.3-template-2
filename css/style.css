@@ -212,22 +212,23 @@ main {
 }
 
 .border-left-primary {
-  border-left: 3px solid #3B71CA;
+  border-left: 3px solid #3B71CA !important;
 }
+
 .border-left-secondary {
-  border-left: 3px solid #9FA6B2;
+  border-left: 3px solid #9FA6B2 !important;
 }
 .border-left-success {
-  border-left: 3px solid #14A44D;
+  border-left: 3px solid #14A44D !important;
 }
 .border-left-danger {
-  border-left: 3px solid #DC4C64;
+  border-left: 3px solid #DC4C64 !important;
 }
 .border-left-warning {
-  border-left: 3px solid #E4A11B;
+  border-left: 3px solid #E4A11B !important;
 }
 .border-left-info {
-  border-left: 3px solid #54B4D3;
+  border-left: 3px solid #54B4D3 !important;
 }
 
 .selected{
