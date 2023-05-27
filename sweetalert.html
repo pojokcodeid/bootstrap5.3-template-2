@@ -340,38 +340,70 @@
   <script>
     let btn1=document.getElementById("sweet1");
     btn1.addEventListener("click",function(){    
-      swal("Hello world!");    
+      swal("Hello world!");
+      swal({
+        text: "Hello World"
+      });
+      let swm=document.querySelector(".swal-modal");
+      swm.classList.add("bg-body");
     })
     let btn2=document.getElementById("sweet2");
-    btn2.addEventListener("click",function(){    
-      swal("Anda Gagal!", "You clicked the button!", "error");  
+    btn2.addEventListener("click",function(){  
+      swal({
+        title: "Anda Gagal!", 
+        text: "You clicked the button!", 
+        icon: './aset/img/error.png',
+        animation:false
+       });  
+      let swm=document.querySelector(".swal-modal");
+      swm.classList.add("bg-body");
     })
     let btn3=document.getElementById("sweet3");
     btn3.addEventListener("click",function(){    
-      swal("Anda Berhasil!", "You clicked the button!", "success");  
+      swal({
+        title: "Anda Berhasil!", 
+        text: "You clicked the button!", 
+        icon: './aset/img/success.png',
+        animation:false
+       });  
+      let swm=document.querySelector(".swal-modal");
+      swm.classList.add("bg-body");
     })
     let btn4=document.getElementById("sweet4");
-    btn4.addEventListener("click",function(){    
-      swal("Mohon perhatian!", "You clicked the button!", "info");  
+    btn4.addEventListener("click",function(){  
+      swal({
+        title: "Mohon perhatian!", 
+        text: "You clicked the button!", 
+        icon: './aset/img/info.png',
+        animation:false
+       });  
+      let swm=document.querySelector(".swal-modal");
+      swm.classList.add("bg-body"); 
     })
     let btn5=document.getElementById("sweet5");
     btn5.addEventListener("click",function(){    
       swal({
         title: "Are you sure?",
         text: "Once deleted, you will not be able to recover this imaginary file!",
-        icon: "warning",
+        icon: "./aset/img/warning.png",
         buttons: true,
         dangerMode: true,
       })
       .then((willDelete) => {
         if (willDelete) {
           swal("Poof! Your imaginary file has been deleted!", {
-            icon: "success",
+            icon: "./aset/img/success.png",
           });
+          let swm=document.querySelector(".swal-modal");
+          swm.classList.add("bg-body");  
         } else {
           swal("Your imaginary file is safe!");
+          let swm=document.querySelector(".swal-modal");
+          swm.classList.add("bg-body");  
         }
-      });  
+      }); 
+      let swm=document.querySelector(".swal-modal");
+      swm.classList.add("bg-body");  
     })
   </script>
   <script src="./aset/js/script.js"></script>

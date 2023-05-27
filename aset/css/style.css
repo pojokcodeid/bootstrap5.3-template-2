@@ -221,3 +221,24 @@ body {
   width: 100%;
   margin: 0;
 }
+
+/* sweet alet custom */
+.swal-title{
+  color: #3B71CA !important;
+}
+
+.swal-text{
+  color: #6c757d !important;
+}
+
+.swal-button--confirm{
+  background-color: var(--bs-blue);
+}
+
+.swal-button-container button:hover{
+  background-color: #3B71CA !important;
+}
+
+.swal-footer{
+  text-align: center !important;
+}
