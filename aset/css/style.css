@@ -222,6 +222,10 @@ body {
   margin: 0;
 }
 
+.cp-1{
+  padding: 2px !important;
+}
+
 /* sweet alet custom */
 .swal-title{
   color: #3B71CA !important;
